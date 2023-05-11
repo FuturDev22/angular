@@ -1,0 +1,27 @@
+<!-- <input type="number" name="price" [(ngModel)]="priceMax"> -->
+<div class="row">
+<div class="col-md-1"></div>  
+<!-- <button class="alert" (click)="getAlert()"> {{alert}}
+  alert
+</button>   -->
+<div class="card" style="width: 18rem;" *ngFor="let p of listvideos; let i=index">
+    <div >
+    <img class="card-img-top" src="https://www.lascom.com/wp-content/uploads/2021/03/Bland_Cosmetic_Product_Packaging_Unit_500x400.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{p.titre}}</h5>
+      <p class="card-text">genre:{{p.genre}}</p>
+      <p class="card-text">public:{{p.public}}</p>
+      <p class="card-text">nombre:{{p.nbrShared}}</p>
+      <button *ngIf="p.nbrShared === 0" >Modifier</button>
+      <button *ngIf="p.public===true" (click)="incrementerPartage(video)">Partager</button>
+
+
+      <!-- <button class="btn btn-primary" (click)="acheter(i)" [disabled]="p.quantity==0">acheter</button>
+      <button href="#" class="btn btn-primary" (click)="like(i)">like</button>
+      <button href="#" class="btn btn-primary" (click)="delete(p.id)">Delete</button>
+      <a href="#" class="btn btn-primary" [routerLink]="['/product', p.id]">Detail</a> -->
+    </div>
+    </div>
+</div>
+</div>
+  
